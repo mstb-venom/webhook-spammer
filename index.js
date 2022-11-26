@@ -3,12 +3,11 @@ const cheerio = require("cheerio");
 const request = require("request");
 const readline = require("readline");
 const fs = require("fs");
-const title = require('title');
 const { URLSearchParams } = require("url");
 const e = require("express");
 
 process.title = "webhook spammer" //제목
-let http = fs.readFileSync("./http.txt").toString().split("\n")
+
 
 
 
@@ -18,7 +17,7 @@ var firstLog = false;
 const text_main = `\x1b[31m
     ┌─  T E S T   ───────────────────────────────────┐
     │                                                │
-    │  [0] WEbhook terro                             │
+    │  [0] webhook spammer                           │
     │                                                │
     │                                                │
     └────────────────────────────────────────────────┘
@@ -70,17 +69,7 @@ async function MAINE() {
     };
 };
 
-async function notmake() {
-    console.clear();
-    console.log(" 죄송합니다! 아직 미완성인 기능입니다");
 
-    let rl = readline.createInterface(process.stdin, process.stdout);
-    let res = await new Promise((resolve) => rl.question("\n", resolve));
-    rl.close();
-
-    let mode = res.trim();
-        MAIN();
-};
 function pausecomp(millis) {
     var date = new Date();
     var curDate = null;
